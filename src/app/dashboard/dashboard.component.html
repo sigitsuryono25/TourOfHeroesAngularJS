@@ -1,8 +1,31 @@
+<h5 class="font-weight-bold"> Koreancorners: Populer Posts</h5>
 <div class="row">
-    <div class="col-md-4" *ngFor="let hero of heroes">
-        <div class="m-1" style="background-image: url('{{hero.image}}');
-        background-position: center; background-size: cover; width: 100%; height: 250px; background-repeat: no-repeat;">
-            
+    <div class="col-md-4" *ngFor="let populer of populers">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="m-1" style="background-image: url('{{populer.thumbnail}}');
+                background-position: center; background-size: cover; width: 100%; height: 250px; background-repeat: no-repeat;">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <a routerLink="detail/{{populer.slug_title}}"><span class="h6">{{populer.title}}</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<h5 class="font-weight-bold"> Koreancorners: Latest Posts</h5>
+<div class="row">
+    <div class="col-md-4" *ngFor="let latespost of latesposts">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="m-1" style="background-image: url('{{latespost.thumbnail}}');
+                background-position: center; background-size: cover; width: 100%; height: 250px; background-repeat: no-repeat;">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <a routerLink="detail/{{latespost.slug_title}}"><span class="h6">{{latespost.title}}</span></a>
+            </div>
         </div>
     </div>
 </div>
